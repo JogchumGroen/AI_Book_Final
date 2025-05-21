@@ -234,7 +234,7 @@ def ai_opdracht():
         }
         
         response = requests.post(
-            "https://api-inference.huggingface.co/models/bigscience/bloom-560m",
+            "https://api-inference.huggingface.co/models/gpt2",
             headers=headers,
             json=payload
         )
