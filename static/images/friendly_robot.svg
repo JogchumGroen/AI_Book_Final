@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hoofd -->
+    <rect x="50" y="25" width="100" height="100" rx="10" fill="#e8f4f8" stroke="#2b3894" stroke-width="4"/>
+    
+    <!-- Ogen -->
+    <circle cx="80" cy="60" r="15" fill="#2b3894"/>
+    <circle cx="120" cy="60" r="15" fill="#2b3894"/>
+    <circle cx="80" cy="60" r="5" fill="white"/>
+    <circle cx="120" cy="60" r="5" fill="white"/>
+    
+    <!-- Glimlach -->
+    <path d="M70,90 Q100,110 130,90" fill="none" stroke="#2b3894" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Lichaam -->
+    <rect x="75" y="125" width="50" height="60" rx="5" fill="#e8f4f8" stroke="#2b3894" stroke-width="4"/>
+    
+    <!-- Zwaaiende arm -->
+    <path d="M125,140 Q150,125 160,100" fill="none" stroke="#2b3894" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="160" cy="100" r="7.5" fill="#e8f4f8" stroke="#2b3894" stroke-width="4"/>
+    
+    <!-- Andere arm -->
+    <path d="M75,140 L40,160" fill="none" stroke="#2b3894" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="40" cy="160" r="7.5" fill="#e8f4f8" stroke="#2b3894" stroke-width="4"/>
+</svg> 
