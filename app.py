@@ -25,7 +25,7 @@ STATIC_DIR = Path('static')
 api_key = os.getenv('HUGGINGFACE_API_KEY')
 if not api_key:
     logger.error("HUGGINGFACE_API_KEY niet gevonden in environment variables")
-client = InferenceClient("mistralai/Mistral-7B-Instruct-v0.2", token=api_key)
+client = InferenceClient("google/flan-t5-base", token=api_key)
 
 def setup_directories():
     """Zorg ervoor dat alle benodigde directories bestaan"""
@@ -214,8 +214,8 @@ def ai_opdracht():
     if not prompt:
         return jsonify({'error': 'Geen prompt ontvangen.'}), 400
     try:
-        # Format de prompt voor het Mistral instructie model
-        formatted_prompt = f"<s>[INST] {prompt} [/INST]"
+        # Format de prompt voor het T5 model
+        formatted_prompt = f"Beantwoord de volgende vraag: {prompt}"
         
         # Haal de response op van HuggingFace
         response = client.text_generation(
