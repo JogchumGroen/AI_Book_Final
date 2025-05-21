@@ -171,9 +171,6 @@ def download_entire_book():
         content=html_content
     )
     
-    # Configureer fonts
-    font_config = FontConfiguration()
-    
     # Genereer PDF
     html = HTML(string=rendered_html)
     css = CSS(string='''
@@ -198,9 +195,9 @@ def download_entire_book():
             max-width: 100%;
             height: auto;
         }
-    ''', font_config=font_config)
+    ''')
     
-    pdf = html.write_pdf(stylesheets=[css], font_config=font_config)
+    pdf = html.write_pdf(stylesheets=[css])
     
     # Stuur de PDF als download
     return send_file(
