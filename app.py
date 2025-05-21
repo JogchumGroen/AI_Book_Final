@@ -4,7 +4,7 @@ import markdown
 import os
 import logging
 import io
-from weasyprint import HTML, CSS
+from weasyprint import HTML, CSS, FontConfiguration
 import requests
 import json
 import re
