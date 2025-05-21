@@ -25,7 +25,6 @@ STATIC_DIR = Path('static')
 api_key = os.getenv('HUGGINGFACE_API_KEY')
 if not api_key:
     logger.error("HUGGINGFACE_API_KEY niet gevonden in environment variables")
-client = InferenceClient("distilgpt2", token=api_key)
 
 def setup_directories():
     """Zorg ervoor dat alle benodigde directories bestaan"""
@@ -214,20 +213,42 @@ def ai_opdracht():
     if not prompt:
         return jsonify({'error': 'Geen prompt ontvangen.'}), 400
     try:
-        # Format de prompt voor het GPT-2 model
+        # Format de prompt
         formatted_prompt = f"Vraag: {prompt}\nAntwoord:"
         
-        # Haal de response op van HuggingFace
-        response = client.text_generation(
-            formatted_prompt,
-            max_new_tokens=500,
-            temperature=0.7,
-            top_p=0.95,
-            repetition_penalty=1.15,
-            do_sample=True
+        # Maak de API call naar HuggingFace
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+        
+        payload = {
+            "inputs": formatted_prompt,
+            "parameters": {
+                "max_new_tokens": 500,
+                "temperature": 0.7,
+                "top_p": 0.95,
+                "repetition_penalty": 1.15,
+                "return_full_text": False
+            }
+        }
+        
+        response = requests.post(
+            "https://api-inference.huggingface.co/models/bigscience/bloom-560m",
+            headers=headers,
+            json=payload
         )
         
-        return jsonify({'antwoord': response.strip()})
+        if response.status_code == 200:
+            result = response.json()
+            if isinstance(result, list) and len(result) > 0:
+                return jsonify({'antwoord': result[0]['generated_text'].strip()})
+            else:
+                return jsonify({'error': 'Geen antwoord ontvangen van het model.'}), 500
+        else:
+            logger.error(f"API Error: {response.status_code} - {response.text}")
+            return jsonify({'error': 'Er is een fout opgetreden bij het verwerken van je vraag.'}), 500
+            
     except Exception as e:
         logger.error(f"Error in AI opdracht: {str(e)}")
         return jsonify({'error': 'Er is een fout opgetreden bij het verwerken van je vraag.'}), 500
