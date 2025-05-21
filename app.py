@@ -25,7 +25,7 @@ STATIC_DIR = Path('static')
 api_key = os.getenv('HUGGINGFACE_API_KEY')
 if not api_key:
     logger.error("HUGGINGFACE_API_KEY niet gevonden in environment variables")
-client = InferenceClient("facebook/opt-350m", token=api_key)
+client = InferenceClient("distilgpt2", token=api_key)
 
 def setup_directories():
     """Zorg ervoor dat alle benodigde directories bestaan"""
@@ -214,7 +214,7 @@ def ai_opdracht():
     if not prompt:
         return jsonify({'error': 'Geen prompt ontvangen.'}), 400
     try:
-        # Format de prompt voor het OPT model
+        # Format de prompt voor het GPT-2 model
         formatted_prompt = f"Vraag: {prompt}\nAntwoord:"
         
         # Haal de response op van HuggingFace
@@ -223,7 +223,8 @@ def ai_opdracht():
             max_new_tokens=500,
             temperature=0.7,
             top_p=0.95,
-            repetition_penalty=1.15
+            repetition_penalty=1.15,
+            do_sample=True
         )
         
         return jsonify({'antwoord': response.strip()})
