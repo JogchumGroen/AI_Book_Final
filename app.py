@@ -200,7 +200,7 @@ def download_entire_book():
         io.BytesIO(pdf),
         mimetype='application/pdf',
         as_attachment=True,
-        download_name="ai_boek_compleet.pdf"
+        download_name="AI_Boek_Compleet.pdf"
     )
 
 @app.route('/ai_opdracht', methods=['POST'])
