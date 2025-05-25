@@ -8,7 +8,6 @@ from weasyprint import HTML, CSS
 import requests
 import json
 import re
-from huggingface_hub import InferenceClient
 
 # Configureer logging
 logging.basicConfig(level=logging.INFO)
@@ -17,14 +16,9 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # Directory configuratie
-CONTENT_DIR = Path('src/content/chapters')
+CONTENT_DIR = Path(__file__).parent / 'src' / 'content' / 'chapters'
 BUILD_DIR = Path('build')
 STATIC_DIR = Path('static')
-
-# Initialiseer HuggingFace client met API key
-api_key = os.getenv('HUGGINGFACE_API_KEY')
-if not api_key:
-    logger.error("HUGGINGFACE_API_KEY niet gevonden in environment variables")
 
 def setup_directories():
     """Zorg ervoor dat alle benodigde directories bestaan"""
@@ -170,6 +164,9 @@ def download_entire_book():
         content=html_content
     )
     
+    # Configureer fonts
+    font_config = FontConfiguration()
+    
     # Genereer PDF
     html = HTML(string=rendered_html)
     css = CSS(string='''
@@ -194,9 +191,9 @@ def download_entire_book():
             max-width: 100%;
             height: auto;
         }
-    ''')
+    ''', font_config=font_config)
     
-    pdf = html.write_pdf(stylesheets=[css])
+    pdf = html.write_pdf(stylesheets=[css], font_config=font_config)
     
     # Stuur de PDF als download
     return send_file(
@@ -213,45 +210,27 @@ def ai_opdracht():
     if not prompt:
         return jsonify({'error': 'Geen prompt ontvangen.'}), 400
     try:
-        # Format de prompt
-        formatted_prompt = f"Vraag: {prompt}\nAntwoord:"
-        
-        # Maak de API call naar HuggingFace
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
-        }
-        
-        payload = {
-            "inputs": formatted_prompt,
-            "parameters": {
-                "max_new_tokens": 500,
-                "temperature": 0.7,
-                "top_p": 0.95,
-                "repetition_penalty": 1.15,
-                "return_full_text": False
-            }
-        }
-        
         response = requests.post(
-            "https://api-inference.huggingface.co/models/gpt2",
-            headers=headers,
-            json=payload
+            'http://localhost:11434/api/generate',
+            json={
+                "model": "mistral",
+                "prompt": prompt,
+                "stream": True
+            },
+            stream=True
         )
-        
-        if response.status_code == 200:
-            result = response.json()
-            if isinstance(result, list) and len(result) > 0:
-                return jsonify({'antwoord': result[0]['generated_text'].strip()})
-            else:
-                return jsonify({'error': 'Geen antwoord ontvangen van het model.'}), 500
-        else:
-            logger.error(f"API Error: {response.status_code} - {response.text}")
-            return jsonify({'error': 'Er is een fout opgetreden bij het verwerken van je vraag.'}), 500
-            
+        antwoord = ''
+        for line in response.iter_lines():
+            if line:
+                try:
+                    chunk = line.decode('utf-8')
+                    data = json.loads(chunk)
+                    antwoord += data.get('response', '')
+                except Exception as e:
+                    continue
+        return jsonify({'antwoord': antwoord.strip()})
     except Exception as e:
-        logger.error(f"Error in AI opdracht: {str(e)}")
-        return jsonify({'error': 'Er is een fout opgetreden bij het verwerken van je vraag.'}), 500
+        return jsonify({'error': str(e)}), 500
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -263,5 +242,5 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     setup_directories()
-    logger.info("Server start op http://localhost:8000")
-    app.run(host='localhost', port=8000, debug=False, use_reloader=False)
+    logger.info("Server start op http://localhost:8001")
+    app.run(host='localhost', port=8001, debug=False, use_reloader=False)
