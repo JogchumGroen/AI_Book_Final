@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - AI voor Beginners</title>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <style>
+        :root {
+            --primary-color: #2b3894;
+            --text-color: #333;
+            --bg-color: #fff;
+            --nav-bg: #f5f5f5;
+            --link-color: #2b3894;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: var(--nav-bg);
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: var(--link-color);
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #e0e0e0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            margin: 1rem 0;
+            padding-left: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+
+        .matrix {
+            background: #f4f8ff;
+            border: 2px solid #2b3894;
+            border-radius: 16px;
+            padding: 2em 1.5em;
+            margin: 2em 0;
+            box-shadow: 0 2px 8px #0001;
+        }
+        .matrix-row {
+            display: flex;
+            gap: 1.5em;
+            flex-wrap: wrap;
+            margin-bottom: 1.2em;
+        }
+        .matrix-cell {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.2em 1em;
+            flex: 1 1 320px;
+            min-width: 260px;
+            box-shadow: 0 2px 8px #0001;
+            margin-bottom: 0.5em;
+        }
+        .fabel, .feit {
+            /* Geen border-left meer, alleen evt. icoon of lichte achtergrond */
+        }
+        .matrix-icon {
+            font-size: 2em;
+            margin-bottom: 0.3em;
+        }
+        .matrix-uitleg {
+            margin-top: 0.7em;
+            color: #2b3894;
+        }
+
+        .navbar { background: #f5f5f5; border-bottom: 1px solid #ddd; }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0.5rem 1rem; }
+        .nav-left { display: flex; align-items: center; gap: 1rem; flex-direction: row; }
+        .nav-right { display: flex; align-items: center; }
+        .nav-logo { font-weight: bold; color: #2b3894; text-decoration: none; font-size: 1.2rem; }
+        .nav-menu { list-style: none; display: flex; align-items: center; gap: 1rem; margin: 0; padding: 0; }
+        .nav-menu li { position: relative; }
+        .nav-menu a { color: #2b3894; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.2s; display: block; }
+        .nav-menu a:hover, .download-btn:hover { background: #e0e0e0; }
+        .download-btn { background: #2b3894; color: #fff !important; }
+        .dropdown .dropbtn { cursor: pointer; }
+        .dropdown-content { display: none; position: absolute; left: 0; top: 110%; background: #fff; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border-radius: 4px; z-index: 10; }
+        .dropdown-content a { color: #333; padding: 12px 16px; border-bottom: 1px solid #f5f6fa; }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { display: block; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .hamburger span { display: block; width: 25px; height: 3px; background: #2b3894; border-radius: 2px; }
+        @media (max-width: 800px) {
+            .nav-container { flex-direction: row; }
+            .nav-left, .nav-right { flex-direction: column; }
+            .nav-menu { flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: #f5f5f5; display: none; }
+            .nav-menu.open { display: flex; }
+            .hamburger { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo">Home</a>
+                <ul id="nav-menu" class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Hoofdstukken</a>
+                        <div class="dropdown-content">
+                            {% if chapters %}
+                                {% for chapter in chapters %}
+                                    <a href="/{{ chapter.filename }}">{{ chapter.nummer }}. {{ chapter.name[3:] if chapter.name[:3].isdigit() else chapter.name }}</a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    {% if prev_chapter %}
+                        <li><a href="/{{ prev_chapter }}">&larr; Vorige</a></li>
+                    {% endif %}
+                    {% if next_chapter %}
+                        <li><a href="/{{ next_chapter }}">Volgende &rarr;</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <h1>{{ title }}</h1>
+        <hr style="border:1px solid #2b3894; margin-bottom:2.5rem;">
+        {% if content %}
+            {{ content | safe }}
+            <section id="ai-voorbeeld-blok" style="max-width:600px;margin:2rem auto;padding:1.5rem;background:#f4f8ff;border:1.5px solid #2b3894;border-radius:12px;box-shadow:0 2px 8px #0001;">
+                <h2 style="color:#2b3894;">AI Voorbeeld</h2>
+                <p><i id="ai-voorbeeld-tekst"></i></p>
+            </section>
+        {% elif request.path == '/' %}
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px;">
+                <svg width="320" height="420" viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="320" height="420" rx="32" fill="#2b3894"/>
+                  <circle cx="160" cy="180" r="80" fill="#fff" fill-opacity="0.12"/>
+                  <circle cx="160" cy="180" r="56" fill="#fff" fill-opacity="0.18"/>
+                  <rect x="60" y="300" width="200" height="16" rx="8" fill="#fff" fill-opacity="0.18"/>
+                  <rect x="100" y="320" width="120" height="10" rx="5" fill="#fff" fill-opacity="0.10"/>
+                  <path d="M120 180c0-22 18-40 40-40s40 18 40 40-18 40-40 40-40-18-40-40zm40-24a24 24 0 100 48 24 24 0 000-48z" fill="#fff" fill-opacity="0.7"/>
+                  <rect x="80" y="60" width="160" height="32" rx="16" fill="#fff" fill-opacity="0.18"/>
+                </svg>
+                <h2 style="color:#2b3894;margin-top:2rem;font-size:2.2rem;letter-spacing:0.04em;">AI voor Beginners</h2>
+                <p style="color:#2b3894;opacity:0.7;font-size:1.1rem;margin-top:0.5rem;">Interactief leerboek over kunstmatige intelligentie</p>
+            </div>
+        {% else %}
+            <p>Welkom bij AI voor Beginners! Kies een hoofdstuk uit het menu om te beginnen.</p>
+        {% endif %}
+    </main>
+
+    <section id="ai-opdracht-blok" style="max-width:600px;margin:2rem auto;padding:1.5rem;background:#f4f8ff;border:1.5px solid #2b3894;border-radius:12px;box-shadow:0 2px 8px #0001;">
+        <h2 style="color:#2b3894;">Probeer zelf een AI-opdracht!</h2>
+        <p>Typ hieronder een vraag of opdracht voor de AI en klik op <b>Stuur naar AI</b>.</p>
+        <form id="ai-form" onsubmit="return false;" style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <input id="ai-prompt" type="text" placeholder="Jouw opdracht of vraag..." style="flex:1;padding:0.5rem;border:1px solid #bbb;border-radius:6px;min-width:200px;" required />
+            <button id="ai-verzend" type="submit" style="background:#2b3894;color:#fff;padding:0.5rem 1.2rem;border:none;border-radius:6px;cursor:pointer;">Stuur naar AI</button>
+        </form>
+        <div id="ai-antwoord" style="margin-top:1rem;font-size:1.1em;color:#222;"></div>
+    </section>
+
+    <script>
+        // Highlight huidige pagina in navigatie
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.style.backgroundColor = '#e0e0e0';
+                }
+            });
+
+            // Zoek het AI voorbeeld in de content
+            const aiVoorbeeld = document.querySelector('.ai-voorbeeld');
+            if (aiVoorbeeld) {
+                document.getElementById('ai-voorbeeld-tekst').textContent = aiVoorbeeld.textContent.trim();
+                aiVoorbeeld.style.display = 'none'; // Verberg het originele element
+            }
+        });
+
+        document.getElementById('ai-form').addEventListener('submit', async function() {
+            const prompt = document.getElementById('ai-prompt').value;
+            const antwoordDiv = document.getElementById('ai-antwoord');
+            antwoordDiv.textContent = 'AI denkt na...';
+            try {
+                const resp = await fetch('/ai_opdracht', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt })
+                });
+                const data = await resp.json();
+                if (data.antwoord) {
+                    antwoordDiv.textContent = data.antwoord;
+                } else {
+                    antwoordDiv.textContent = 'Fout: ' + (data.error || 'Onbekende fout');
+                }
+            } catch (e) {
+                antwoordDiv.textContent = 'Er ging iets mis met de verbinding.';
+            }
+        });
+
+        // Hamburger functionaliteit
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+            });
+        }
+    </script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html> 

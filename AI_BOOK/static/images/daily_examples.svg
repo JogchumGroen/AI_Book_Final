@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Smartphone met gezichtsherkenning -->
+    <rect x="20" y="20" width="60" height="100" rx="10" fill="#e8f4f8" stroke="#2b3894" stroke-width="2"/>
+    <circle cx="50" cy="50" r="15" fill="none" stroke="#2b3894" stroke-width="2"/>
+    <path d="M42.5,45 L57.5,45 M42.5,55 L57.5,55" stroke="#2b3894" stroke-width="2" fill="none"/>
+    
+    <!-- Zoekbalk -->
+    <rect x="120" y="20" width="60" height="20" rx="10" fill="white" stroke="#2b3894" stroke-width="2"/>
+    <circle cx="130" cy="30" r="5" fill="none" stroke="#2b3894" stroke-width="2"/>
+    <line x1="133.5" y1="33.5" x2="140" y2="40" stroke="#2b3894" stroke-width="2"/>
+    
+    <!-- Spraakassistent -->
+    <circle cx="50" cy="150" r="25" fill="#e8f4f8" stroke="#2b3894" stroke-width="2"/>
+    <path d="M40,150 Q50,160 60,150 M35,150 Q50,170 65,150" stroke="#2b3894" stroke-width="2" fill="none"/>
+    
+    <!-- Netflix-stijl aanbevelingen -->
+    <rect x="120" y="120" width="60" height="60" rx="5" fill="#e8f4f8" stroke="#2b3894" stroke-width="2"/>
+    <rect x="130" y="130" width="40" height="10" rx="2.5" fill="#2b3894"/>
+    <rect x="130" y="145" width="30" height="10" rx="2.5" fill="#2b3894"/>
+    <rect x="130" y="160" width="35" height="10" rx="2.5" fill="#2b3894"/>
+</svg> 
