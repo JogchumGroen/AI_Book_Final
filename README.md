@@ -4,7 +4,7 @@ Een Flask-gebaseerde server voor het AI Boek project, inclusief lokale AI via Ol
 
 ## Repository en Workflow
 
-Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book
+Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book_Final
 
 ### Belangrijke mappen
 - `AI_Book/` - De hoofdmap van het project
