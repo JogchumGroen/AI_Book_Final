@@ -2,6 +2,17 @@
 
 Een Flask-gebaseerde server voor het AI Boek project. Dit project bevat alle hoofdstukken in markdown, een moderne webinterface en automatische backups.
 
+## Verbinding met GitHub
+
+Dit project is gekoppeld aan een GitHub repository: [AI_Book_Final](https://github.com/JogchumGroen/AI_Book_Final).
+
+- Alle code, hoofdstukken en wijzigingen worden via deze repository beheerd.
+- Gebruik altijd `git add`, `git commit` en `git push` om je wijzigingen te bewaren en te synchroniseren met GitHub.
+- Voor samenwerking of backup is GitHub de centrale plek.
+
+**Let op:**
+Elke keer dat je mij (de AI-assistent) vraagt naar de README, gebruik ik deze als dé referentie voor de structuur, workflow en afspraken van het project. Verwijs dus gerust naar deze README als je wilt dat ik weet hoe het project werkt of is opgebouwd.
+
 ## Repository en Workflow
 
 Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book_Final
@@ -32,14 +43,10 @@ Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book_Final
    ```
 2. Start de server met:
    ```bash
-   ./start.sh
-   ```
-   of handmatig:
-   ```bash
    source venv/bin/activate
-   python3 app.py
+   FLASK_APP=app.py FLASK_ENV=development FLASK_DEBUG=1 python3 -m flask run --port=8002
    ```
-   De server draait standaard op [http://localhost:8001](http://localhost:8001)
+   De server draait standaard op [http://localhost:8002](http://localhost:8002)
 
 ## Project Structuur
 
@@ -68,17 +75,22 @@ Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book_Final
 
 - Plaats nieuwe hoofdstukken in `src/content/chapters/`
 - Plaats afbeeldingen in `static/images/`
-- De server herlaadt automatisch bij wijzigingen (tenzij debug mode uit staat)
+- De server herlaadt automatisch bij wijzigingen (debug mode is ingeschakeld)
 - Backups kun je handmatig maken (zie onder)
 
 ## Probleemoplossing
 
 1. **Server start niet**
-   - Controleer of poort 8001 vrij is
-   - Stop handmatig andere processen op poort 8001 indien nodig
+   - Controleer of poort 8002 vrij is
+   - Stop handmatig andere processen op poort 8002 indien nodig
+   - Zorg ervoor dat je in de virtuele omgeving bent (`source venv/bin/activate`)
 
 2. **Afbeeldingen niet zichtbaar**
    - Controleer of de afbeelding in `static/images/` staat
+
+3. **Debug Mode**
+   - Debug mode is standaard ingeschakeld
+   - Debugger PIN: 371-449-073 (indien nodig voor debugging)
 
 ## Licentie
 
@@ -91,6 +103,43 @@ Maak een backup van het hele project met:
     tar -czf backup_ai_voor_beginners_$(date +%Y%m%d_%H%M%S).tar.gz .
 
 De backup wordt opgeslagen in de hoofdmap. Oude backups kun je veilig verwijderen uit de map `RECOVERY/`.
+
+## Lokale server starten
+
+Volg deze stappen om de server lokaal te draaien:
+
+1. **Maak (eenmalig) een virtuele omgeving aan:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+   Dit zorgt ervoor dat alle benodigde Python-pakketten lokaal worden geïnstalleerd, zonder je systeem te vervuilen.
+
+2. **Activeer de virtuele omgeving (elke keer als je aan het project werkt):**
+   ```bash
+   source venv/bin/activate
+   ```
+
+3. **Start de server:**
+   ```bash
+   python3 app.py
+   ```
+   Of, als je een specifieke poort wilt gebruiken (bijvoorbeeld 8002):
+   ```bash
+   FLASK_APP=app.py FLASK_ENV=development FLASK_DEBUG=1 python3 -m flask run --port=8002
+   ```
+
+4. **Open je browser en ga naar:**
+   [http://localhost:8001](http://localhost:8001) (of de poort die je gekozen hebt)
+
+### Veelvoorkomende problemen
+- **ModuleNotFoundError: No module named 'flask'**
+  > Je zit waarschijnlijk niet in de virtuele omgeving. Voer eerst `source venv/bin/activate` uit.
+- **Port 8001 is in use**
+  > Er draait al iets op deze poort. Kies een andere poort of stop het andere proces.
+- **requirements.txt ontbreekt of is niet up-to-date**
+  > Vraag om het juiste bestand of update met `pip install -r requirements.txt`.
 
 ---
 

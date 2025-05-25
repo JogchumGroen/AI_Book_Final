@@ -87,10 +87,6 @@
   </div>
 </div>
 
-<div style="display: flex; justify-content: center; margin: 2.5em 0 1.5em 0;">
-  <a href="/download_pdf/alles" style="background: #2b3894; color: white; padding: 0.9em 2.2em; border-radius: 10px; text-decoration: none; font-size: 1.25em; font-weight: bold; box-shadow: 0 2px 8px rgba(43,56,148,0.08);">Download alle hoofdstukken (PDF)</a>
-</div>
-
 <div class="ai-voorbeeld">Kun je een korte samenvatting geven van elk hoofdstuk in dit boek? Vertel in 1 zin per hoofdstuk waar het over gaat.</div>
 
 ## Oefening 
