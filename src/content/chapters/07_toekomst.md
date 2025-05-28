@@ -66,21 +66,6 @@
   </div>
 </div>
 
-## Oefening
-
-<div class="matrix-cell oefening">
-  <strong>Oefening:</strong><br>
-  <em>Ontwerp jouw AI-toekomst</em>
-  <div class="matrix-uitleg">
-    <ol>
-      <li>Teken of beschrijf een AI-toepassing die jij graag zou willen zien in de toekomst</li>
-      <li>Bedenk hoe deze AI-toepassing mensen zou kunnen helpen</li>
-      <li>Bespreek met een klasgenoot wat er goed en minder goed zou kunnen gaan</li>
-      <li>Presenteer jullie ideeën aan de klas</li>
-    </ol>
-  </div>
-</div>
-
 ## Tijdlijn van de toekomst
 
 <div class="matrix-cell toekomst">
@@ -96,4 +81,6 @@
   </div>
 </div>
 
-<div class="ai-voorbeeld">Kun je 3 manieren beschrijven waarop AI jouw leven over 10 jaar zal veranderen? Denk aan school, werk en thuis. Leg voor elke verandering uit waarom het nuttig zou zijn.</div> 
+## Oefening
+
+Teken of beschrijf een AI-toepassing die jij graag zou willen zien in de toekomst. Bedenk hoe deze AI-toepassing mensen zou kunnen helpen. Bespreek met een klasgenoot wat er goed en minder goed zou kunnen gaan. Presenteer jullie ideeën aan de klas. 

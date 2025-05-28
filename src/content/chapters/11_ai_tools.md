@@ -108,6 +108,10 @@ Kunstmatige intelligentie is overal! Naast de voorbeelden in dit boek zijn er no
 
 ---
 
-> Let op: Sommige tools zijn gratis, andere hebben een betaald abonnement of een gratis proefversie.
+<div class="matrix-cell info">
+Let op: Sommige tools zijn gratis, andere hebben een betaald abonnement of een gratis proefversie.
+</div>
 
-<div class="ai-voorbeeld">Kun je drie verschillende AI-tools noemen en kort uitleggen waarvoor je ze kunt gebruiken?</div> 
+<div class="matrix-cell info">
+Kun je drie verschillende AI-tools noemen en kort uitleggen waarvoor je ze kunt gebruiken?
+</div> 

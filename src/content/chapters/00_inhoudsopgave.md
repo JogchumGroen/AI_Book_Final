@@ -53,11 +53,13 @@
   <em>Maak het meeste van dit boek</em>
   <div class="matrix-uitleg">
     Je kunt dit boek op verschillende manieren gebruiken:
-    - Lees het van voor naar achter
-    - Spring naar interessante onderwerpen
-    - Doe de oefeningen
-    - Bespreek met klasgenoten
-    - Maak je eigen projecten
+    <ul>
+      <li>Lees het van voor naar achter</li>
+      <li>Spring naar interessante onderwerpen</li>
+      <li>Doe de oefeningen</li>
+      <li>Bespreek met klasgenoten</li>
+      <li>Maak je eigen projecten</li>
+    </ul>
   </div>
 </div>
 
@@ -69,24 +71,26 @@
   <em>Ideeën voor het onderwijs</em>
   <div class="matrix-uitleg">
     Dit boek kan gebruikt worden als:
-    - Lesmateriaal voor een project over AI
-    - Bron voor spreekbeurten
-    - Aanleiding voor klassengesprekken
-    - Basis voor creatieve opdrachten
+    <ul>
+      <li>Lesmateriaal voor een project over AI</li>
+      <li>Bron voor spreekbeurten</li>
+      <li>Aanleiding voor klassengesprekken</li>
+      <li>Basis voor creatieve opdrachten</li>
+    </ul>
   </div>
 </div>
 
-## Over de auteurs
+## Over de auteur
 
 <div class="matrix-cell auteurs">
   <img src="/static/images/ai_vergrootglas.svg" alt="AI met vergrootglas" width="48" style="float:right;margin-left:1em;opacity:0.5;"/>
   <strong>Wie heeft dit boek gemaakt?</strong><br>
-  <em>Een team van experts</em>
+  <em>Johan Groen</em>
   <div class="matrix-uitleg">
-    Dit boek is geschreven door een team van experts op het gebied van AI en onderwijs. We hebben geprobeerd om de stof zo duidelijk en interessant mogelijk te maken voor jonge lezers.
+    Dit boek is geschreven door Johan Groen. Hij heeft geprobeerd om de stof zo duidelijk en interessant mogelijk te maken voor jonge lezers.
   </div>
 </div>
 
-<div class="ai-voorbeeld">Kun je een korte samenvatting geven van elk hoofdstuk in dit boek? Vertel in 1 zin per hoofdstuk waar het over gaat.</div>
+## Oefening
 
-## Oefening 
+<div class="ai-voorbeeld">Kun je een korte samenvatting geven van elk hoofdstuk in dit boek? Vertel in 1 zin per hoofdstuk waar het over gaat.</div> 

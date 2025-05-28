@@ -111,6 +111,4 @@
       <li>Jouw eigen inzicht blijft het belangrijkst</li>
     </ul>
   </div>
-</div>
-
-<div class="ai-voorbeeld">Ik wil een project maken waarbij ik verschillende AI-tools vergelijk. Kun je me helpen met een plan van aanpak? Vertel me welke tools ik kan gebruiken en hoe ik ze kan vergelijken.</div> 
+</div> 

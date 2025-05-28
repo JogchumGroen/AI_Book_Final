@@ -92,7 +92,4 @@
       <li>Vraag hulp als je er niet uitkomt</li>
       <li>Deel je successen met anderen</li>
     </ul>
-  </div>
-</div>
-
-<div class="ai-voorbeeld">Ik wil graag leren hoe ik AI kan gebruiken om een tekst te verbeteren. Kun je me stap voor stap uitleggen hoe ik dat moet doen? Geef ook voorbeelden van wat ik kan vragen.</div> 
+  </div> 

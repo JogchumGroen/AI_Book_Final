@@ -68,14 +68,6 @@
   </div>
 </div>
 
-<div class="ai-voorbeeld">Kun je 3 voorbeelden geven van hoe AI jouw dagelijks leven makkelijker maakt? Leg voor elk voorbeeld uit hoe het werkt en waarom het handig is.</div>
-
 ## Oefening
 
-<div class="matrix-cell oefening">
-  <strong>Oefening:</strong><br>
-  <em>AI in jouw leven</em>
-  <div class="matrix-uitleg">
-    Bedenk drie manieren waarop AI jouw leven makkelijker maakt. Bespreek dit met een klasgenoot en vergelijk jullie antwoorden. Zijn er ook dingen die jullie liever zonder AI zouden doen? Waarom?
-  </div>
-</div> 
+Bedenk drie manieren waarop AI jouw leven makkelijker maakt. Bespreek dit met een klasgenoot en vergelijk jullie antwoorden. Zijn er ook dingen die jullie liever zonder AI zouden doen? Waarom? 

@@ -190,4 +190,33 @@ pre {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.matrix-cell {
+    border: 2px solid #2b3894;
+    background: #eaf0fb;
+    padding: 1.2rem 1rem 1rem 1rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px rgba(43,56,148,0.04);
+    position: relative;
+}
+
+.matrix-cell strong {
+    color: #2b3894;
+    font-size: 1.1em;
+}
+
+.matrix-cell em {
+    color: #2b3894;
+    opacity: 0.7;
+}
+
+.matrix-cell img {
+    max-width: 56px;
+    margin-bottom: 0.5rem;
+}
+
+.matrix-uitleg {
+    margin-top: 0.7rem;
 } 

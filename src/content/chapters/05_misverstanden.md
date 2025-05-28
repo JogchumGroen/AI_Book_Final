@@ -51,14 +51,22 @@ Er wordt veel gezegd en geschreven over kunstmatige intelligentie. Maar wat is n
 
 ## Wat AI (nog) niet kan
 
-- Zelf nadenken of voelen
-- Echte creativiteit tonen zoals mensen
-- Altijd de juiste beslissing nemen
-- Zichzelf verbeteren zonder hulp van mensen
+<div class="matrix-cell info">
+  <h2>Wat AI (nog) niet kan</h2>
+  <ul>
+    <li>Zelf nadenken of voelen</li>
+    <li>Echte creativiteit tonen zoals mensen</li>
+    <li>Altijd de juiste beslissing nemen</li>
+    <li>Zichzelf verbeteren zonder hulp van mensen</li>
+  </ul>
+</div>
 
 ## Grenzen van AI
 
-AI is een krachtig hulpmiddel, maar het is niet magisch. Het werkt alleen goed als het duidelijke, goede data krijgt en als mensen het op de juiste manier gebruiken.
+<div class="matrix-cell info">
+  <h2>Grenzen van AI</h2>
+  <p>AI is een krachtig hulpmiddel, maar het is niet magisch. Het werkt alleen goed als het duidelijke, goede data krijgt en als mensen het op de juiste manier gebruiken.</p>
+</div>
 
 ## Oefening
 
