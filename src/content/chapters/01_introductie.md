@@ -12,6 +12,15 @@
   Kunstmatige intelligentie (AI) is overal: in je telefoon, op internet, in de klas en zelfs in de supermarkt. Maar wat is AI eigenlijk? En wat kun je er zelf mee?
 </div>
 
+<div class="matrix-cell info" style="margin-top:2em;">
+  <strong>Tip: Gebruik een chatbot tijdens de cursus!</strong><br>
+  <em>Maak leren makkelijker en leuker</em>
+  <div class="matrix-uitleg">
+    Tijdens deze cursus kun je veel leren door te oefenen met een AI-chatbot, zoals <a href="https://chat.openai.com/" target="_blank">ChatGPT</a> of <a href="https://grok.x.ai/" target="_blank">Grok</a>. Stel je vragen, probeer opdrachten uit en laat de chatbot je helpen als je iets niet snapt. Zo krijg je direct feedback en kun je op je eigen tempo leren.<br><br>
+    <strong>Let op:</strong> Niet alle chatbots zijn gratis. ChatGPT heeft een gratis versie, Grok is soms alleen beschikbaar met een account.
+  </div>
+</div>
+
 <div class="matrix-cell info">
   <strong>In dit boek ontdek je:</strong>
   <ul>
