@@ -37,12 +37,12 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Controleer of virtualenv bestaat, zo niet maak het aan
-if [ ! -d ".venv" ]; then
-    error "Virtuele omgeving niet gevonden. Maak deze aan met: python3 -m venv .venv"
+if [ ! -d "venv" ]; then
+    error "Virtuele omgeving niet gevonden. Maak deze aan met: python3 -m venv venv"
 fi
 
 # Activeer virtualenv
-source .venv/bin/activate || error "Kon virtuele omgeving niet activeren"
+source venv/bin/activate || error "Kon virtuele omgeving niet activeren"
 
 # Laad .env variabelen vóór het starten van de server
 if [ -f .env ]; then

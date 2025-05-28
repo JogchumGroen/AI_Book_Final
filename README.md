@@ -144,3 +144,7 @@ Volg deze stappen om de server lokaal te draaien:
 ---
 
 *Laatste update: mei 2025 – projectstructuur en workflow volledig vernieuwd en vereenvoudigd.*
+
+## Let op bij uploaden naar GIT
+
+Backup-bestanden (zoals .tar.gz, .bak en de map RECOVERY/) worden nu genegeerd door GIT. Upload deze dus niet naar de repository, maar bewaar ze alleen lokaal voor eigen gebruik.
