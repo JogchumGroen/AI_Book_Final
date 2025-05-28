@@ -44,9 +44,9 @@ Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book_Final
 2. Start de server met:
    ```bash
    source venv/bin/activate
-   FLASK_APP=app.py FLASK_ENV=development FLASK_DEBUG=1 python3 -m flask run --port=8002
+   FLASK_APP=app.py FLASK_ENV=development FLASK_DEBUG=1 python3 -m flask run --port=8001
    ```
-   De server draait standaard op [http://localhost:8002](http://localhost:8002)
+   De server draait standaard op [http://localhost:8001](http://localhost:8001)
 
 ## Project Structuur
 
@@ -81,8 +81,8 @@ Dit project is gehost op GitHub: https://github.com/JogchumGroen/AI_Book_Final
 ## Probleemoplossing
 
 1. **Server start niet**
-   - Controleer of poort 8002 vrij is
-   - Stop handmatig andere processen op poort 8002 indien nodig
+   - Controleer of poort 8001 vrij is
+   - Stop handmatig andere processen op poort 8001 indien nodig
    - Zorg ervoor dat je in de virtuele omgeving bent (`source venv/bin/activate`)
 
 2. **Afbeeldingen niet zichtbaar**
@@ -102,7 +102,7 @@ Maak een backup van het hele project met:
 
     tar -czf backup_ai_voor_beginners_$(date +%Y%m%d_%H%M%S).tar.gz .
 
-De backup wordt opgeslagen in de hoofdmap. Oude backups kun je veilig verwijderen uit de map `RECOVERY/`.
+De backup wordt opgeslagen in de hoofdmap. Bewaar backups lokaal en upload ze niet naar de repository.
 
 ## Lokale server starten
 
@@ -125,9 +125,9 @@ Volg deze stappen om de server lokaal te draaien:
    ```bash
    python3 app.py
    ```
-   Of, als je een specifieke poort wilt gebruiken (bijvoorbeeld 8002):
+   Of, als je een specifieke poort wilt gebruiken (bijvoorbeeld 8001):
    ```bash
-   FLASK_APP=app.py FLASK_ENV=development FLASK_DEBUG=1 python3 -m flask run --port=8002
+   FLASK_APP=app.py FLASK_ENV=development FLASK_DEBUG=1 python3 -m flask run --port=8001
    ```
 
 4. **Open je browser en ga naar:**
@@ -143,7 +143,7 @@ Volg deze stappen om de server lokaal te draaien:
 
 ---
 
-*Laatste update: mei 2025 – projectstructuur en workflow volledig vernieuwd en vereenvoudigd.*
+*Laatste update: maart 2024 – projectstructuur en workflow volledig vernieuwd en vereenvoudigd.*
 
 ## Let op bij uploaden naar GIT
 

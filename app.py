@@ -232,6 +232,24 @@ def ai_opdracht():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/privacy')
+def privacy():
+    tekst = """
+    <h2>Privacyverklaring</h2>
+    <p>Wij respecteren jouw privacy. Op deze website worden geen persoonlijke gegevens verzameld, behalve wanneer je contact met ons opneemt via e-mail. Jouw gegevens worden nooit gedeeld met derden en alleen gebruikt om jouw vraag te beantwoorden.</p>
+    <p>Deze website gebruikt geen tracking cookies of analytische diensten van derden.</p>
+    <p>Heb je vragen over privacy? Neem gerust contact op via <a href='mailto:jhgroen@gmail.com'>jhgroen@gmail.com</a>.</p>
+    """
+    return render_template('base.html', title='Privacy', content=tekst)
+
+@app.route('/contact')
+def contact():
+    tekst = """
+    <h2>Contact</h2>
+    <p>Heb je een vraag of opmerking? Stuur gerust een e-mail naar <a href='mailto:jhgroen@gmail.com'>jhgroen@gmail.com</a>.</p>
+    """
+    return render_template('base.html', title='Contact', content=tekst)
+
 @app.errorhandler(404)
 def page_not_found(e):
     """Toon een vriendelijke 404 pagina"""
