@@ -29,4 +29,10 @@
 
 ## Oefening
 
-<div class="ai-voorbeeld">Kun je uitleggen wat het verschil is tussen een gewone computer en een AI? Gebruik een voorbeeld uit het dagelijks leven.</div> 
+<div class="matrix-cell info">
+  <strong>Oefening</strong><br>
+  <em>Test je begrip van AI</em>
+  <div class="matrix-uitleg">
+    Kun je uitleggen wat het verschil is tussen een gewone computer en een AI? Gebruik een voorbeeld uit het dagelijks leven.
+  </div>
+</div> 

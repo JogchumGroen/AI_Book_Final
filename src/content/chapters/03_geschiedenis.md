@@ -45,4 +45,10 @@
 
 ## Oefening
 
-<div class="ai-voorbeeld">Kun je in 5 zinnen uitleggen hoe AI zich heeft ontwikkeld van de eerste computers tot nu? Noem minstens één belangrijk moment uit de geschiedenis.</div> 
+<div class="matrix-cell info">
+  <strong>Oefening</strong><br>
+  <em>Test je kennis over de geschiedenis van AI</em>
+  <div class="matrix-uitleg">
+    Kun je in 5 zinnen uitleggen hoe AI zich heeft ontwikkeld van de eerste computers tot nu? Noem minstens één belangrijk moment uit de geschiedenis.
+  </div>
+</div> 

@@ -70,8 +70,12 @@ Er wordt veel gezegd en geschreven over kunstmatige intelligentie. Maar wat is n
 
 ## Oefening
 
-Bedenk een uitspraak over AI die je vaak hoort. Vraag aan de AI of het een feit of een fabel is, en leg samen uit waarom. Bespreek je bevindingen met iemand anders.
-
-<div class="ai-voorbeeld">
-Kun je 3 veelvoorkomende misverstanden over AI noemen en voor elk misverstand uitleggen waarom het niet klopt? Gebruik voorbeelden uit het dagelijks leven om je uitleg duidelijker te maken.
+<div class="matrix-cell info">
+  <strong>Oefening</strong><br>
+  <em>Onderzoek AI-misverstanden</em>
+  <div class="matrix-uitleg">
+    <p>Bedenk een uitspraak over AI die je vaak hoort. Vraag aan de AI of het een feit of een fabel is, en leg samen uit waarom. Bespreek je bevindingen met iemand anders.</p>
+    
+    <p><strong>Extra uitdaging:</strong> Kun je 3 veelvoorkomende misverstanden over AI noemen en voor elk misverstand uitleggen waarom het niet klopt? Gebruik voorbeelden uit het dagelijks leven om je uitleg duidelijker te maken.</p>
+  </div>
 </div> 

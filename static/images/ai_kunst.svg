@@ -1,0 +1,9 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="12" width="48" height="48" rx="10" fill="#eaf0fb" stroke="#2b3894" stroke-width="2"/>
+  <rect x="28" y="28" width="16" height="16" rx="4" fill="#fff" stroke="#2b3894" stroke-width="1.5"/>
+  <text x="36" y="40" text-anchor="middle" font-size="10" fill="#2b3894" font-family="Arial">AI</text>
+  <path d="M52 52 Q60 60 62 62 Q60 64 58 62 Q56 60 52 52" stroke="#2b3894" stroke-width="2" fill="none"/>
+  <rect x="54" y="54" width="6" height="10" rx="2" fill="#f7c873" stroke="#2b3894" stroke-width="1"/>
+  <ellipse cx="57" cy="64" rx="3" ry="2" fill="#f7c873" stroke="#2b3894" stroke-width="1"/>
+  <circle cx="57" cy="57" r="2" fill="#2b3894"/>
+</svg> 

@@ -25,11 +25,12 @@
       <li><a href="/04_basis">Basis</a></li>
       <li><a href="/05_misverstanden">Misverstanden</a></li>
       <li><a href="/06_toepassingen">Toepassingen</a></li>
-      <li><a href="/07_toekomst">Toekomst</a></li>
-      <li><a href="/08_zelf_aan_de_slag">Zelf aan de slag</a></li>
-      <li><a href="/09_praktische_opdrachten">Praktische opdrachten</a></li>
-      <li><a href="/10_gevorderde_opdrachten">Gevorderde opdrachten</a></li>
-      <li><a href="/11_ai_tools">Andere AI-tools</a></li>
+      <li><a href="/07_creativiteit">AI en Creativiteit</a></li>
+      <li><a href="/08_toekomst">Toekomst</a></li>
+      <li><a href="/09_zelf_aan_de_slag">Zelf aan de slag</a></li>
+      <li><a href="/10_praktische_opdrachten">Praktische opdrachten</a></li>
+      <li><a href="/11_gevorderde_opdrachten">Gevorderde opdrachten</a></li>
+      <li><a href="/12_ai_tools">AI-tools</a></li>
     </ol>
   </div>
 </div>
