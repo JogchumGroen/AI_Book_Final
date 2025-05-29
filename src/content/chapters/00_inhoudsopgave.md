@@ -90,8 +90,4 @@
   <div class="matrix-uitleg">
     Dit boek is geschreven door Johan Groen. Hij heeft geprobeerd om de stof zo duidelijk en interessant mogelijk te maken voor jonge lezers.
   </div>
-</div>
-
-## Oefening
-
-<div class="ai-voorbeeld">Kun je een korte samenvatting geven van elk hoofdstuk in dit boek? Vertel in 1 zin per hoofdstuk waar het over gaat.</div> 
+</div> 
