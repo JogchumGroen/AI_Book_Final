@@ -49,6 +49,20 @@
         <hr style="border:1px solid #2b3894; margin-bottom:2.5rem;">
         {% if content %}
             {{ content | safe }}
+            <div class="chapter-navigation">
+                <div class="nav-buttons">
+                    {% if prev_chapter %}
+                        <a href="/{{ prev_chapter }}" class="nav-button prev">
+                            <i class="fas fa-arrow-left"></i> Vorige
+                        </a>
+                    {% endif %}
+                    {% if next_chapter %}
+                        <a href="/{{ next_chapter }}" class="nav-button next">
+                            Volgende <i class="fas fa-arrow-right"></i>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
         {% elif request.path == '/' %}
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px;">
                 <svg width="320" height="420" viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg">
